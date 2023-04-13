@@ -75,7 +75,7 @@ function sum(mixedArr) {
 
 function averageNumbers(numbers) {
   
-  if(sum2 === ""){
+  if(numbers.length === 0){
     return null
   }
 
@@ -83,7 +83,7 @@ function averageNumbers(numbers) {
   for (let i = 0; i < numbers.length; i++) {
     sum2 += numbers[i];
   }
-  return sum2 / 100;
+  return sum2 / numbers.length;
 
  }
 
