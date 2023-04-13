@@ -74,29 +74,22 @@ function sum(mixedArr) {
 // Level 1: Array of numbers
 
 function averageNumbers(numbers) {
-  if (numbers.length === 0) {
-    return null;
+  
+  if(sum2 === ""){
+    return null
   }
-  
-  const sum = numbers.reduce((acc, curr) => acc + curr, 0);
-  const avg = sum / numbers.length;
-  
-  return avg;
-}
+
+  let sum2 = 0;
+  for (let i = 0; i < numbers.length; i++) {
+    sum2 += numbers[i];
+  }
+  return sum2 / 100;
+
+ }
+
 
 // Level 2: Array of strings
-const wordsArr = ['seat', 'correspond', 'linen', 'motif', 'hole', 'smell', 'smart', 'chaos', 'fuel', 'palace'];
 
-function averageWordLength(words) {
-  if (words.length === 0) {
-    return null;
-  }
-  
-  const totalLength = words.reduce((acc, curr) => acc + curr.length, 0);
-  const avgLength = totalLength / words.length;
-  
-  return avgLength;
-}
 
 
 // Bonus - Iteration #4.1
@@ -117,21 +110,25 @@ const wordsUnique = [
   'bring'
 ];
 
-function uniquifyArray(words) {
-  if (words.length === 0) {
+function uniquifyArray(stringsArr) {
+  if (stringsArr.length === 0) {
     return null;
   }
   
-  const uniqueWords = [];
+  const newArr = [];
   
-  words.forEach((word) => {
-    if (!uniqueWords.includes(word)) {
-      uniqueWords.push(word);
+  for(let i = 0; i< stringsArr.length; i++){
+    if (newArr.indexOf(stringsArr[i])> 0){
+      continue;
+    } else {
+      newArr.push(stringsArr[i])
     }
-  });
+    
+  }
+  return newArr
+  }
   
-  return uniqueWords;
-}
+  
 
 
 
